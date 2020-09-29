@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="S1mpleNote.NotePage"
+             Title="Заметка">
+    <ContentPage.Content>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Editor Grid.Row="0" Text="{Binding Text}" Margin="5,2,5,2"/>
+            <StackLayout Grid.Row="1" Orientation="Horizontal" VerticalOptions="End" Margin="5,2,5,2">
+                <Button x:Name="SaveNote" Text="Сохранить" Clicked="SaveNote_Clicked" />
+                <Button x:Name="DeleteNote" Text="Удалить" Clicked="DeleteNote_ClickedAsync" />
+                <Button x:Name="Cancel" Text="Отмена" Clicked="Cancel_Clicked" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
